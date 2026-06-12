@@ -7,11 +7,11 @@ export const Route = createFileRoute("/mood")({
 });
 
 const MOODS = [
-  { label: "신나요" },
-  { label: "괜찮아요" },
-  { label: "화나요" },
-  { label: "슬퍼요" },
-  { label: "힘들어요" },
+  { emoji: "😀", label: "신나요" },
+  { emoji: "😐", label: "괜찮아요" },
+  { emoji: "😡", label: "화나요" },
+  { emoji: "😢", label: "슬퍼요" },
+  { emoji: "😣", label: "힘들어요" },
 ];
 
 function Mood() {
@@ -34,6 +34,7 @@ function Mood() {
                 active ? "border-leaf bg-leaf/20" : "bg-card"
               }`}
             >
+              <span className="text-6xl sm:text-7xl">{m.emoji}</span>
               <span className="text-xl sm:text-2xl font-display text-foreground">{m.label}</span>
             </button>
           );
@@ -46,6 +47,7 @@ function Mood() {
             <p className="text-2xl sm:text-3xl font-display text-foreground">
               잘했어! 알려줘서 고마워.
             </p>
+            <div className="text-6xl mt-3">👍⭐</div>
           </div>
         </div>
       )}
