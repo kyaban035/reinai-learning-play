@@ -6,10 +6,10 @@ export const Route = createFileRoute("/activities")({
 });
 
 const CARDS = [
-  { to: "/choose", title: "둘 중 하나 고르기", bg: "bg-sky/30", border: "border-sky" },
-  { to: "/situation", title: "상황 해결하기", bg: "bg-sunny/60", border: "border-praise" },
-  { to: "/predict", title: "어떻게 될까요?", bg: "bg-leaf/30", border: "border-leaf" },
-  { to: "/finish", title: "오늘 활동 마무리", bg: "bg-praise/40", border: "border-praise" },
+  { to: "/choose", title: "둘 중 하나 고르기", icon: "🍕  🎨", bg: "bg-sky/30", border: "border-sky" },
+  { to: "/situation", title: "상황 해결하기", icon: "❓ 🏠", bg: "bg-sunny/60", border: "border-praise" },
+  { to: "/predict", title: "어떻게 될까요?", icon: "💭", bg: "bg-leaf/30", border: "border-leaf" },
+  { to: "/finish", title: "오늘 활동 마무리", icon: "⭐ 👍", bg: "bg-praise/40", border: "border-praise" },
 ] as const;
 
 function Activities() {
@@ -26,6 +26,7 @@ function Activities() {
             to={c.to}
             className={`card-soft card-soft-hover p-8 sm:p-10 flex flex-col items-center justify-center gap-4 min-h-44 sm:min-h-56 ${c.bg} ${c.border}`}
           >
+            <div className="text-6xl sm:text-7xl">{c.icon}</div>
             <div className="text-2xl sm:text-3xl font-display text-foreground text-center">
               {c.title}
             </div>
