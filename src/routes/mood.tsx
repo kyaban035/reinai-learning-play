@@ -46,7 +46,6 @@ function Mood() {
             <p className="text-2xl sm:text-3xl font-display text-foreground">
               잘했어! 알려줘서 고마워.
             </p>
-            <div className="text-6xl mt-3">👍⭐</div>
           </div>
         </div>
       )}
