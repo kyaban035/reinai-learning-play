@@ -20,7 +20,7 @@ const QUESTIONS: ScenarioQ[] = [
   },
   {
     situation: "연필이 없어요.",
-    illustration: "😯✏️",
+    illustration: "😯",
     question: "무엇이 필요할까요?",
     options: [
       { label: "연필", icon: "✏️" },
