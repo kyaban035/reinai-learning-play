@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SituationRouteImport } from './routes/situation'
+import { Route as PredictRouteImport } from './routes/predict'
+import { Route as MoodRouteImport } from './routes/mood'
+import { Route as FinishRouteImport } from './routes/finish'
+import { Route as ChooseRouteImport } from './routes/choose'
+import { Route as ActivitiesRouteImport } from './routes/activities'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SituationRoute = SituationRouteImport.update({
+  id: '/situation',
+  path: '/situation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PredictRoute = PredictRouteImport.update({
+  id: '/predict',
+  path: '/predict',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoodRoute = MoodRouteImport.update({
+  id: '/mood',
+  path: '/mood',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinishRoute = FinishRouteImport.update({
+  id: '/finish',
+  path: '/finish',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChooseRoute = ChooseRouteImport.update({
+  id: '/choose',
+  path: '/choose',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActivitiesRoute = ActivitiesRouteImport.update({
+  id: '/activities',
+  path: '/activities',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/activities': typeof ActivitiesRoute
+  '/choose': typeof ChooseRoute
+  '/finish': typeof FinishRoute
+  '/mood': typeof MoodRoute
+  '/predict': typeof PredictRoute
+  '/situation': typeof SituationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/activities': typeof ActivitiesRoute
+  '/choose': typeof ChooseRoute
+  '/finish': typeof FinishRoute
+  '/mood': typeof MoodRoute
+  '/predict': typeof PredictRoute
+  '/situation': typeof SituationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/activities': typeof ActivitiesRoute
+  '/choose': typeof ChooseRoute
+  '/finish': typeof FinishRoute
+  '/mood': typeof MoodRoute
+  '/predict': typeof PredictRoute
+  '/situation': typeof SituationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/activities'
+    | '/choose'
+    | '/finish'
+    | '/mood'
+    | '/predict'
+    | '/situation'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/activities'
+    | '/choose'
+    | '/finish'
+    | '/mood'
+    | '/predict'
+    | '/situation'
+  id:
+    | '__root__'
+    | '/'
+    | '/activities'
+    | '/choose'
+    | '/finish'
+    | '/mood'
+    | '/predict'
+    | '/situation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ActivitiesRoute: typeof ActivitiesRoute
+  ChooseRoute: typeof ChooseRoute
+  FinishRoute: typeof FinishRoute
+  MoodRoute: typeof MoodRoute
+  PredictRoute: typeof PredictRoute
+  SituationRoute: typeof SituationRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/situation': {
+      id: '/situation'
+      path: '/situation'
+      fullPath: '/situation'
+      preLoaderRoute: typeof SituationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/predict': {
+      id: '/predict'
+      path: '/predict'
+      fullPath: '/predict'
+      preLoaderRoute: typeof PredictRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mood': {
+      id: '/mood'
+      path: '/mood'
+      fullPath: '/mood'
+      preLoaderRoute: typeof MoodRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finish': {
+      id: '/finish'
+      path: '/finish'
+      fullPath: '/finish'
+      preLoaderRoute: typeof FinishRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/choose': {
+      id: '/choose'
+      path: '/choose'
+      fullPath: '/choose'
+      preLoaderRoute: typeof ChooseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/activities': {
+      id: '/activities'
+      path: '/activities'
+      fullPath: '/activities'
+      preLoaderRoute: typeof ActivitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +177,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ActivitiesRoute: ActivitiesRoute,
+  ChooseRoute: ChooseRoute,
+  FinishRoute: FinishRoute,
+  MoodRoute: MoodRoute,
+  PredictRoute: PredictRoute,
+  SituationRoute: SituationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
