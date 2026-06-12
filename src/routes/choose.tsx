@@ -168,13 +168,11 @@ function Choose() {
                 active ? "border-leaf bg-leaf/20" : "bg-card"
               }`}
             >
-              {pair.color ? (
+              {pair.color && (
                 <div
                   className="w-28 h-28 sm:w-40 sm:h-40 rounded-3xl border-4 border-border"
                   style={{ background: COLOR_MAP[label] }}
                 />
-              ) : (
-                <div className="text-7xl sm:text-8xl">{icon}</div>
               )}
               <div className="text-2xl sm:text-3xl font-display text-foreground">{label}</div>
             </button>
