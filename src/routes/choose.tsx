@@ -118,7 +118,6 @@ function Choose() {
               }}
               className="card-soft card-soft-hover p-8 sm:p-10 flex flex-col items-center justify-center gap-3 min-h-40 bg-sunny/60 border-praise"
             >
-              <div className="text-6xl sm:text-7xl">{t.emoji}</div>
               <div className="text-2xl sm:text-3xl font-display text-foreground">{t.title}</div>
             </button>
           ))}
