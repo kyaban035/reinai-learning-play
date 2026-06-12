@@ -6,7 +6,7 @@ export const Route = createFileRoute("/choose")({
   component: Choose,
 });
 
-type Pair = { left: string; right: string; color?: boolean };
+type Pair = { left: string; right: string; leftIcon?: string; rightIcon?: string; color?: boolean };
 type Topic = {
   id: string;
   emoji: string;
