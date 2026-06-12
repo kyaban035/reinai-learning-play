@@ -43,7 +43,7 @@ export function ScenarioActivity({
 
       <div className="text-center mt-4">
         <p className="text-3xl sm:text-5xl font-display text-foreground">{q.situation}</p>
-        <div className="my-6 sm:my-8 text-7xl sm:text-9xl">{q.illustration}</div>
+        {q.illustration && <div className="my-6 sm:my-8 text-7xl sm:text-9xl">{q.illustration}</div>}
         <p className="text-2xl sm:text-4xl font-display text-foreground">{q.question}</p>
       </div>
 
