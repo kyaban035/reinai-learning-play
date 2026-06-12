@@ -15,12 +15,9 @@ function Start() {
         </h1>
         <div className="my-10 sm:my-12 flex items-center justify-center">
           <div className="card-soft px-10 py-10 sm:px-16 sm:py-14 bg-sunny/60 border-praise">
-            <div className="flex items-center justify-center gap-4 text-7xl sm:text-8xl">
-              <span>😊</span>
-              <span>⭐</span>
-              <span>💬</span>
-              <span>👍</span>
-            </div>
+            <p className="text-2xl sm:text-3xl font-display text-foreground text-center">
+              재인아, 오늘도 신나는 수업을<br />시작해 볼까?
+            </p>
           </div>
         </div>
 

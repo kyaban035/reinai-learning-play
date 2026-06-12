@@ -8,11 +8,11 @@ export const Route = createFileRoute("/situation")({
 const QUESTIONS: ScenarioQ[] = [
   {
     situation: "비가 와요.",
-    illustration: "🌧️",
+    illustration: "",
     question: "무엇을 가져갈까요?",
     options: [
-      { label: "우산", icon: "☂️" },
-      { label: "공", icon: "⚽" },
+      { label: "우산", icon: "" },
+      { label: "공", icon: "" },
     ],
     correctIndex: 0,
     correctMsg: "잘했어요! 비가 오면 우산이 필요해요.",
@@ -20,11 +20,11 @@ const QUESTIONS: ScenarioQ[] = [
   },
   {
     situation: "연필이 없어요.",
-    illustration: "😯",
+    illustration: "",
     question: "무엇이 필요할까요?",
     options: [
-      { label: "연필", icon: "✏️" },
-      { label: "신발", icon: "👟" },
+      { label: "연필", icon: "" },
+      { label: "신발", icon: "" },
     ],
     correctIndex: 0,
     correctMsg: "맞아요! 글씨를 쓰려면 연필이 필요해요.",
@@ -32,11 +32,11 @@ const QUESTIONS: ScenarioQ[] = [
   },
   {
     situation: "목이 말라요.",
-    illustration: "😵",
+    illustration: "",
     question: "무엇이 필요할까요?",
     options: [
-      { label: "물", icon: "💧" },
-      { label: "모자", icon: "🧢" },
+      { label: "물", icon: "" },
+      { label: "모자", icon: "" },
     ],
     correctIndex: 0,
     correctMsg: "맞아요! 목이 마르면 물을 마셔요.",
@@ -44,11 +44,11 @@ const QUESTIONS: ScenarioQ[] = [
   },
   {
     situation: "손이 더러워요.",
-    illustration: "🙌",
+    illustration: "",
     question: "무엇을 해야 할까요?",
     options: [
-      { label: "비누로 손 씻기", icon: "🧼" },
-      { label: "장난감 가지고 놀기", icon: "🧸" },
+      { label: "비누로 손 씻기", icon: "" },
+      { label: "장난감 가지고 놀기", icon: "" },
     ],
     correctIndex: 0,
     correctMsg: "잘했어요! 손이 더러우면 깨끗하게 씻어요.",
@@ -56,11 +56,11 @@ const QUESTIONS: ScenarioQ[] = [
   },
   {
     situation: "넘어져서 다쳤어요.",
-    illustration: "🤕",
+    illustration: "",
     question: "무엇을 해야 할까요?",
     options: [
-      { label: "약 바르기", icon: "💊" },
-      { label: "게임하기", icon: "🎮" },
+      { label: "약 바르기", icon: "" },
+      { label: "게임하기", icon: "" },
     ],
     correctIndex: 0,
     correctMsg: "맞아요! 다쳤을 때는 치료를 받아요.",

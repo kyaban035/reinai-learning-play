@@ -43,7 +43,7 @@ export function ScenarioActivity({
 
       <div className="text-center mt-4">
         <p className="text-3xl sm:text-5xl font-display text-foreground">{q.situation}</p>
-        <div className="my-6 sm:my-8 text-7xl sm:text-9xl">{q.illustration}</div>
+        {q.illustration && <div className="my-6 sm:my-8 text-7xl sm:text-9xl">{q.illustration}</div>}
         <p className="text-2xl sm:text-4xl font-display text-foreground">{q.question}</p>
       </div>
 
@@ -64,7 +64,7 @@ export function ScenarioActivity({
                   : "bg-card"
               }`}
             >
-              <div className="text-6xl sm:text-7xl">{opt.icon}</div>
+              {opt.icon && <div className="text-6xl sm:text-7xl">{opt.icon}</div>}
               <div className="text-xl sm:text-2xl font-display text-foreground text-center">
                 {opt.label}
               </div>
@@ -81,7 +81,7 @@ export function ScenarioActivity({
             }`}
           >
             <p className="text-2xl sm:text-3xl font-display text-foreground">
-              {isCorrect ? `${q.correctMsg} ⭐` : `${q.retryMsg} 💡`}
+              {isCorrect ? `${q.correctMsg}` : `${q.retryMsg}`}
             </p>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
