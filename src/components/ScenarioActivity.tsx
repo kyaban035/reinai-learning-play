@@ -64,7 +64,7 @@ export function ScenarioActivity({
                   : "bg-card"
               }`}
             >
-              <div className="text-6xl sm:text-7xl">{opt.icon}</div>
+              {opt.icon && <div className="text-6xl sm:text-7xl">{opt.icon}</div>}
               <div className="text-xl sm:text-2xl font-display text-foreground text-center">
                 {opt.label}
               </div>
