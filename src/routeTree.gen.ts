@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SituationRouteImport } from './routes/situation'
 import { Route as PredictRouteImport } from './routes/predict'
 import { Route as MoodRouteImport } from './routes/mood'
+import { Route as FinishRouteImport } from './routes/finish'
 import { Route as ChooseRouteImport } from './routes/choose'
 import { Route as ActivitiesRouteImport } from './routes/activities'
 import { Route as IndexRouteImport } from './routes/index'
@@ -29,6 +30,11 @@ const PredictRoute = PredictRouteImport.update({
 const MoodRoute = MoodRouteImport.update({
   id: '/mood',
   path: '/mood',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinishRoute = FinishRouteImport.update({
+  id: '/finish',
+  path: '/finish',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChooseRoute = ChooseRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/activities': typeof ActivitiesRoute
   '/choose': typeof ChooseRoute
+  '/finish': typeof FinishRoute
   '/mood': typeof MoodRoute
   '/predict': typeof PredictRoute
   '/situation': typeof SituationRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/activities': typeof ActivitiesRoute
   '/choose': typeof ChooseRoute
+  '/finish': typeof FinishRoute
   '/mood': typeof MoodRoute
   '/predict': typeof PredictRoute
   '/situation': typeof SituationRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/activities': typeof ActivitiesRoute
   '/choose': typeof ChooseRoute
+  '/finish': typeof FinishRoute
   '/mood': typeof MoodRoute
   '/predict': typeof PredictRoute
   '/situation': typeof SituationRoute
@@ -78,16 +87,25 @@ export interface FileRouteTypes {
     | '/'
     | '/activities'
     | '/choose'
+    | '/finish'
     | '/mood'
     | '/predict'
     | '/situation'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/activities' | '/choose' | '/mood' | '/predict' | '/situation'
+  to:
+    | '/'
+    | '/activities'
+    | '/choose'
+    | '/finish'
+    | '/mood'
+    | '/predict'
+    | '/situation'
   id:
     | '__root__'
     | '/'
     | '/activities'
     | '/choose'
+    | '/finish'
     | '/mood'
     | '/predict'
     | '/situation'
@@ -97,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ActivitiesRoute: typeof ActivitiesRoute
   ChooseRoute: typeof ChooseRoute
+  FinishRoute: typeof FinishRoute
   MoodRoute: typeof MoodRoute
   PredictRoute: typeof PredictRoute
   SituationRoute: typeof SituationRoute
@@ -123,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/mood'
       fullPath: '/mood'
       preLoaderRoute: typeof MoodRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finish': {
+      id: '/finish'
+      path: '/finish'
+      fullPath: '/finish'
+      preLoaderRoute: typeof FinishRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/choose': {
@@ -153,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ActivitiesRoute: ActivitiesRoute,
   ChooseRoute: ChooseRoute,
+  FinishRoute: FinishRoute,
   MoodRoute: MoodRoute,
   PredictRoute: PredictRoute,
   SituationRoute: SituationRoute,
