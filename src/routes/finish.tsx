@@ -10,7 +10,7 @@ function Finish() {
       <main className="flex-1 flex items-center justify-center px-6 py-10">
         <div className="text-center max-w-3xl">
           <h1 className="text-5xl sm:text-7xl font-display text-foreground mb-8">
-            오늘 활동 끝! 🎉
+            오늘 활동 끝!
           </h1>
 
           <div className="card-soft px-8 py-10 sm:px-14 sm:py-14 bg-sunny/70 border-praise">
