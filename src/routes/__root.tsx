@@ -82,6 +82,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "재인이를 위한 신나는 언어 수업" },
       { property: "og:description", content: "선택하고, 생각하고, 말해 보는 치료실 활동 사이트" },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "재인이를 위한 신나는 언어 수업" },
+      { name: "twitter:description", content: "선택하고, 생각하고, 말해 보는 치료실 활동 사이트" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7443ee8f-6ca2-4388-9b24-720bcb415f5c/id-preview-2ab9290a--572154c1-9d9e-460c-839f-9aef81cbaa62.lovable.app-1781282185042.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7443ee8f-6ca2-4388-9b24-720bcb415f5c/id-preview-2ab9290a--572154c1-9d9e-460c-839f-9aef81cbaa62.lovable.app-1781282185042.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
