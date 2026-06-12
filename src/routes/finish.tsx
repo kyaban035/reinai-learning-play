@@ -19,7 +19,7 @@ function Finish() {
               <br />
               너는 멋진 심재인이야.
             </p>
-            <div className="mt-6 text-7xl sm:text-8xl">⭐ 👍 🌟</div>
+            
           </div>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
