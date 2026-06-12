@@ -81,7 +81,7 @@ export function ScenarioActivity({
             }`}
           >
             <p className="text-2xl sm:text-3xl font-display text-foreground">
-              {isCorrect ? `${q.correctMsg} ⭐` : `${q.retryMsg} 💡`}
+              {isCorrect ? `${q.correctMsg}` : `${q.retryMsg}`}
             </p>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
