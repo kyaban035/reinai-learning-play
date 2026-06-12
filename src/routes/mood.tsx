@@ -7,11 +7,11 @@ export const Route = createFileRoute("/mood")({
 });
 
 const MOODS = [
-  { emoji: "😀", label: "신나요" },
-  { emoji: "😐", label: "괜찮아요" },
-  { emoji: "😡", label: "화나요" },
-  { emoji: "😢", label: "슬퍼요" },
-  { emoji: "😣", label: "힘들어요" },
+  { label: "신나요" },
+  { label: "괜찮아요" },
+  { label: "화나요" },
+  { label: "슬퍼요" },
+  { label: "힘들어요" },
 ];
 
 function Mood() {
