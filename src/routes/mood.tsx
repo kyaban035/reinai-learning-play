@@ -34,7 +34,6 @@ function Mood() {
                 active ? "border-leaf bg-leaf/20" : "bg-card"
               }`}
             >
-              <span className="text-6xl sm:text-7xl">{m.emoji}</span>
               <span className="text-xl sm:text-2xl font-display text-foreground">{m.label}</span>
             </button>
           );
