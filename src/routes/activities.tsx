@@ -26,7 +26,6 @@ function Activities() {
             to={c.to}
             className={`card-soft card-soft-hover p-8 sm:p-10 flex flex-col items-center justify-center gap-4 min-h-44 sm:min-h-56 ${c.bg} ${c.border}`}
           >
-            <div className="text-6xl sm:text-7xl">{c.icon}</div>
             <div className="text-2xl sm:text-3xl font-display text-foreground text-center">
               {c.title}
             </div>
