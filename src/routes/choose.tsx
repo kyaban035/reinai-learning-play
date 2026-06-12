@@ -183,10 +183,10 @@ function Choose() {
         <div className="mt-8 text-center">
           <div className="card-soft inline-block px-6 py-5 bg-praise/40 border-praise max-w-xl">
             <p className="text-2xl sm:text-3xl font-display text-foreground">
-              {PRAISES[praiseIdx]} ⭐
+              {PRAISES[praiseIdx]}
             </p>
             <p className="mt-3 text-base sm:text-lg text-muted-foreground">
-              💬 선생님 발문: {prompt}
+              선생님 발문: {prompt}
             </p>
           </div>
           <div className="mt-6">
