@@ -158,7 +158,6 @@ function Choose() {
       <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-3xl mx-auto">
         {(["left", "right"] as const).map((side) => {
           const label = side === "left" ? pair.left : pair.right;
-          const icon = side === "left" ? pair.leftIcon : pair.rightIcon;
           const active = picked === side;
           return (
             <button
