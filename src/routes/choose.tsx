@@ -150,7 +150,7 @@ function Choose() {
           ← 주제 다시 고르기
         </button>
         <h2 className="text-3xl sm:text-5xl font-display text-foreground mb-2">
-          {topic.emoji} {topic.title}
+          {topic.title}
         </h2>
         <p className="text-2xl sm:text-4xl font-display text-foreground mt-4 mb-8">어느 것이 좋아?</p>
       </div>
