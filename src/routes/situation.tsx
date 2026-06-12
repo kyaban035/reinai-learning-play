@@ -44,7 +44,7 @@ const QUESTIONS: ScenarioQ[] = [
   },
   {
     situation: "손이 더러워요.",
-    illustration: "🙌🧼",
+    illustration: "🙌",
     question: "무엇을 해야 할까요?",
     options: [
       { label: "비누로 손 씻기", icon: "🧼" },
