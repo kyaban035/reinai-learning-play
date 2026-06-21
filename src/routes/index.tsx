@@ -13,16 +13,6 @@ function Start() {
           <br />
           <span className="text-sky-foreground">신나는 언어 수업</span>
         </h1>
-        <div className="my-10 sm:my-12 flex items-center justify-center">
-          <div className="card-soft px-10 py-10 sm:px-16 sm:py-14 bg-sunny/60 border-praise">
-            <div className="flex items-center justify-center gap-4 text-7xl sm:text-8xl">
-              <span>😊</span>
-              <span>⭐</span>
-              <span>💬</span>
-              <span>👍</span>
-            </div>
-          </div>
-        </div>
 
         <Link
           to="/mood"
